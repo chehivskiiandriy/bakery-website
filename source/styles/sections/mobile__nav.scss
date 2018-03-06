@@ -1,0 +1,21 @@
+.mobile__nav {
+
+    &__menu {
+        padding: 0;
+        margin: 0;
+
+        li {
+            padding: 0.625rem 1.25rem 0.625rem 2rem;
+            background: rgba(57, 63, 73, 0.9);            
+            cursor: pointer;
+
+            &:hover {
+                background: darken(rgba(57, 63, 73, 0.9) , 10%);
+            }
+        }
+    }
+
+    &__link {
+        color: #fff;
+    }
+}

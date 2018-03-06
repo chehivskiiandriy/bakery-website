@@ -1,0 +1,120 @@
+.header {
+    background: rgba(120,117,109,0.5);
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    transition: 0.5s ease-in-out;
+
+    .container {
+        min-height: 3.75rem;
+    }
+
+    &__desktop {
+        display: grid;
+        grid-template-columns: 2fr 8fr 2fr;
+        height: 3.75rem;
+
+        @media screen and (max-width: 1100px) { 
+            display: none;
+        }
+    }
+
+    &__logo {
+        height: inherit;
+        position: relative;
+
+        .logo {
+            @include centerer-y();
+            top: 40%;
+            color: #fff;
+            font-family: $logo-font;
+            font-size: 1.875rem;
+            line-height: 1.5rem;
+
+            &:hover {
+                color: darken(#fff,  20%);
+            }
+        }
+    }
+
+    &__menu {
+        height: inherit;
+        position: relative;
+        
+    }
+
+    &__icon {
+        height: inherit;
+        position: relative;
+
+        .icon {
+            @include centerer-y();
+            right: 0;
+
+            a {
+                padding-right: 1.5rem;
+
+                &:last-child {
+                    padding-right: 0;
+                }
+            }
+        }
+
+        .fa {
+            color: #fff;
+            font-size: 1rem;
+
+            &:hover {
+                color: darken(#fff,  20%);
+            }
+        }
+    }
+
+    &__mobile {
+        height: 3.75rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        &__logo {
+            .logo {
+                color: #fff;
+                font-family: $logo-font;
+                font-size: 1.875rem;
+                line-height: 1.5rem;
+            }
+        }
+
+        .hamburger {
+            padding: 0;
+        }
+
+        @media (min-width: 1101px) { 
+            display: none;
+        }
+
+        @media (max-width: 500px) { 
+            .hamburger {
+                width: 25px;
+
+                &-box{
+                    width: 25px;
+                }
+                &-inner, &-inner::before, &-inner::after {
+                    width: 25px;
+                }
+            }
+        }
+
+    }
+
+    &__mobile__menu {
+        position: absolute;
+        left: 0;
+        display: none;
+    }
+}
+
+.is-active-menu {
+    background: darken(rgba(57, 63, 73, 0.9) , 10%);               
+}

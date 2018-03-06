@@ -1,0 +1,67 @@
+include mixins
+
+section.pancakes
+    .container
+        .pancakes__widget  
+            .pancakes__ready__in
+                h5 Ready in
+                span 40 
+                p mins     
+            .slider-for
+                .slider-for__item
+                    .pancakes__left.item__1                    
+                    .pancakes__right.i1    
+                        +title("Tasty pancakes", "season favourite")
+                        p.
+                            Maecenas nec odio et ante tincidunt tempus. Maecenas tempus, tellus eget condimentum rhoncus, 
+                            sem quam semper libero, sit amet adipiscing sem neque sed.
+                        include rating
+                        .hamburger__2
+                            span.line
+                            span.line
+                            span.line
+                .slider-for__item
+                    .pancakes__left.item__2                    
+                    .pancakes__right.i2 
+                        +title("Tasty sandwich", "season favourite")
+                        p.
+                            Maecenas nec odio et ante tincidunt tempus. Maecenas tempus, tellus eget condimentum rhoncus, 
+                            sem quam semper libero, sit amet adipiscing sem neque sed.
+                        include rating
+                        .hamburger__2
+                            span.line
+                            span.line
+                            span.line 
+                .slider-for__item
+                    .pancakes__left.item__3                    
+                    .pancakes__right.i3  
+                        +title("Tasty berries", "season favourite")
+                        p.
+                            Maecenas nec odio et ante tincidunt tempus. Maecenas tempus, tellus eget condimentum rhoncus, 
+                            sem quam semper libero, sit amet adipiscing sem neque sed.
+                        include rating
+                        .hamburger__2
+                            span.line
+                            span.line
+                            span.line 
+                .slider-for__item
+                    .pancakes__left.item__4                    
+                    .pancakes__right.i4  
+                        +title("Tasty salat", "season favourite")
+                        p.
+                            Maecenas nec odio et ante tincidunt tempus. Maecenas tempus, tellus eget condimentum rhoncus, 
+                            sem quam semper libero, sit amet adipiscing sem neque sed.
+                        include rating
+                        .hamburger__2
+                            span.line
+                            span.line
+                            span.line 
+            .slider-nav
+                .slider-nav__item 
+                    img(src="images/pancake__1.png", alt="")
+                .slider-nav__item 
+                    img(src="images/pancake__2.png", alt="")
+                .slider-nav__item 
+                    img(src="images/pancake__3.png", alt="")
+                .slider-nav__item 
+                    img(src="images/pancake__4.png", alt="")

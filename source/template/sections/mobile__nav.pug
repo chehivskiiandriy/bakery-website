@@ -1,0 +1,7 @@
+- var items = ["Welcome", "Menu", "Reservations", "News", "Contact"]
+- var itemsId = ["Welcome", "Menu", "Reservations", "News", "Contact"]
+
+nav.mobile__nav
+    ul.mobile__nav__menu
+        each item, key in items
+            li: a.mobile__nav__link(href="#"+itemsId[key])= item 

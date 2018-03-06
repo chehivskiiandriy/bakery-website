@@ -1,0 +1,21 @@
+header.header
+    .container
+        .header__desktop
+            .header__logo
+                a.logo(href="#") Gustoso
+            .header__menu
+                include desktop__nav
+            .header__icon
+                .icon
+                    a(href="#"): i.fa.fa-twitter(aria-hidden="true")
+                    a(href="#"): i.fa.fa-facebook(aria-hidden="true")
+                    a(href="#"): i.fa.fa-instagram(aria-hidden="true")
+        .header__mobile
+            .header__mobile__logo 
+                a.logo(href="#") Gustoso
+            .header__button__show__menu 
+                button.button.button__show__menu.hamburger.hamburger--squeeze(type="button")
+                    span.hamburger-box
+                        span.hamburger-inner
+        .header__mobile__menu
+            include mobile__nav

@@ -1,0 +1,281 @@
+.pancakes {
+    background: url('../images/pancakes__bg.jpg') center bottom no-repeat;
+    background-size: cover;
+    padding: 7.5rem 0 3.125rem 0;
+    box-shadow: 0 0.5rem 0.5625rem 0 rgba(0, 0, 0, 0.33);    
+    
+    &__widget {
+        position: relative;
+        margin: 0 11.25rem 3.125rem 5rem;
+        
+        @media screen  and (max-width: 800px) {
+            margin: 0 6rem 1rem 2rem;
+        }
+        @media screen  and (max-width: 500px) {
+            margin: 0 2rem 1rem 0;
+        }
+
+        .arrow {
+            width: 1.5rem;
+            height: 1.5rem;
+            position: absolute;
+            display: block;
+            top: 50%;
+            padding: 0;
+            border: none;
+            outline: none;
+            transform: translate(0, -50%);
+            cursor: pointer;
+
+            @media screen  and (max-width: 1000px) and (orientation: landscape) {
+                width: 2rem;
+                height: 2rem;
+            }
+
+        }
+
+        /* -------start left arrow in slider-nav---------- */
+        .prev {
+            background: url('../images/arrow-left.png');
+            background-size: cover;
+            left: 0;
+        }
+        /* -------finish left arrow in slider-nav---------- */
+
+
+        /* -------start right arrow in slider-nav---------- */
+        .next {
+            background: url('../images/arrow-right.png');
+            background-size: cover;
+            right: 0;
+        }
+        /* -------finish right arrow in slider-nav---------- */
+
+        .slider-nav {
+            position: absolute;
+            bottom: 3.125rem;
+            right: 0;            
+            padding: 0 5%;
+            margin-right: 3.125rem;
+
+            @media screen  and (max-width: 700px) {
+                margin: 0 1.125rem;
+                left: 0;
+            }
+
+            &__item {
+                outline: none;
+                cursor: pointer;
+
+                img {
+                    margin: 0 auto;
+                    width: 80%;
+
+                    @media (min-width: 351px)  and (max-width: 1000px) {
+                        width: 58%;
+                    }
+
+                    @media (min-width: 351px)  and (max-width: 1000px) and (orientation: landscape) {
+                        width: 48%;
+                    }
+
+                    @media screen  and (max-width: 350px) {
+                        width: 60%;
+                    }
+                }
+
+            }
+        }
+        .slider-for {
+            background: #fff;
+            box-shadow: 0 1.563rem 3.375rem 0 rgba(105, 80, 58, 0.45);
+
+            &__item {
+                display: grid;
+                grid-template-columns: 5fr 6fr;
+                outline: none;
+    
+                @media screen  and (max-width: 1000px) {
+                    grid-template-columns: 1fr;
+                }
+    
+                .item__1 {
+                    background: url('../images/pancake__1.jpg') center;
+                    background-size: cover;
+                }
+                .item__2 {
+                    background: url('../images/pancake__2.jpg') right;
+                    background-size: cover;        
+                }
+                .item__3 {
+                    background: url('../images/pancake__3.jpg');
+                    background-size: cover;
+                }
+                .item__4 {
+                    background: url('../images/pancake__4.jpg') center;
+                    background-size: cover;
+                }
+    
+                .i1 {
+                    @import "rating";
+                }
+                .rat2 {
+                    @import "rating";
+                }
+                .i3 {
+                    @import "rating";
+                }
+                .i4 {
+                    @import "rating";
+                }
+            }
+        }
+        
+    }
+
+   /*  --------start fixed block Ready in---------- */
+    &__ready__in {
+        position: absolute;
+        text-align: center;
+        top: -3.125rem;
+        right: -6.25rem;
+        width: 12.5rem;
+        height: 12.5rem;
+        background:  #fff url('../images/ready__bg.jpg');
+        box-shadow: 0 1.563rem 3.375rem 0 rgba(105, 80, 58, 0.45);
+        z-index: 7;
+        font-family: $main-bold-font;
+
+        @media screen  and (max-width: 700px) {
+            top: -5.125rem;
+            right: -2.25rem;
+            width: 8.5rem;
+            height: 8.5rem;
+        }
+        
+        h5 {
+            color: #a47d5e;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            margin-bottom: 0;
+
+            @media screen  and (max-width: 700px) {
+                font-size: 1.2rem;
+                margin-top: 0.75rem;
+            }
+        }
+
+        span {
+            color: #dfc691;
+            font-size: 5rem;
+
+            @media screen  and (max-width: 700px) {
+                font-size: 4rem;
+            }
+        }
+
+        p {
+            color: #979285;
+            font-size: 1rem;
+            margin: 0;
+        }
+    }
+    /*  --------finish fixed block Ready in---------- */
+    
+
+    /*  --------start left part in widget---------- */
+    &__left {
+        width: 100%;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+
+        @media screen  and (max-width: 700px) {
+            display: none;
+        }
+    }
+    /*  --------finish left part in widget---------- */
+
+
+    /*  --------right part in widget---------- */
+    &__right {
+        background-color: #fff;
+        background: url('../images/pancake__right__bg.png') no-repeat;
+        background-position: right bottom;
+        background-size: 60%;
+        padding: 4.375rem 3.125rem 0.625rem 3.125rem;
+        position: relative;
+        
+        @media screen  and (max-width: 700px) {
+            padding: 3.375rem 1.125rem 0.625rem 1.125rem;
+        }
+        
+        p {
+            font-family: $proxima-font;
+            font-size: 0.875rem;
+            line-height: 1.5rem;
+            color: #56534c;
+        }
+
+        .title {
+            margin-right: 3rem;
+        }
+
+        .hamburger__2 {
+            position: absolute;
+            top: 50%;
+            left: -1.563rem;
+            height: 3.125rem;
+            width: 3.125rem;
+            border-radius: 50%;
+            background: #fff;
+            transform: translateY(-50%) rotate(90deg);
+
+            @media screen  and (max-width: 1000px) {
+                display: none;
+            }
+
+            & .line {
+
+                &:first-child {
+                    margin-top: 1.25rem;
+                }
+                width: 1.5rem;
+                height: 0.0625rem;
+                background-color: #d8bba3;
+                display: block;
+                margin: 0.1875rem auto;
+                transition: all 0.3s ease-in-out;
+            }
+              
+            &:hover{
+                cursor: pointer;
+            }
+    
+            &.is-active{
+                transition: all 0.3s ease-in-out;
+                transition-delay: 0.6s;
+            }
+              
+            &.is-active .line:nth-child(2){
+                width: 0px;
+            }
+              
+            &.is-active .line:nth-child(1),
+            &.is-active .line:nth-child(3){
+                transition-delay: 0.3s;
+            }
+            
+            &.is-active .line:nth-child(1){
+                transform: translateY(0.25rem) rotate(45deg);
+            }
+            
+            &.is-active .line:nth-child(3){
+                transform: translateY(-0.25rem) rotate(135deg);
+            }
+        } 
+    }
+    /*  --------finish right part in widget---------- */
+    
+
+}

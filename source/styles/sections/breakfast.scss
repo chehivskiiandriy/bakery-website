@@ -1,0 +1,136 @@
+.breakfast {
+    background: url('../images/breakfast__bg.jpg') center center no-repeat;
+    background-size: cover;
+    text-align: center;
+    padding: 5rem 0;
+
+    @media screen and (max-width: 790px) {
+        // padding: 1rem 0;
+        background-size: auto 100%;    
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        @media screen and (max-width: 790px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__left {
+
+        @media screen and (max-width: 790px) {
+            margin-bottom: 2rem;
+        }
+
+        .title { 
+            &__header {
+                color: #fff;        
+            }
+
+            @media screen and (max-width: 790px) {
+                // margin-bottom: 2.5rem;
+            }
+
+        }
+
+        .paragraph {
+            h5 {
+                color: #fff;
+                margin-bottom: 0;
+                font-size: 1.25rem;
+
+                @media screen and (max-width: 790px) {
+                    // margin-top: 1rem;
+                }
+            }
+
+            p {
+                color: #c2beba;
+                margin-top: 0;
+
+                @media screen and (max-width: 790px) {
+                    // margin-bottom: 0;
+                }
+            }
+
+            span {
+                color: #dfc691;
+                font-size: 1.75rem;
+            }
+        }
+    }
+
+    &__right {
+        .menu {
+            position: relative;
+            margin: 0 0 0 30%;
+            background: #f3f1e9;
+            color: #56534c;
+
+            @media screen and (max-width: 790px) {
+                margin: 5% 20% 0 20%;
+            }
+
+            @media screen and (max-width: 580px) {
+                margin: 5%;
+            }
+
+            &__border {
+                position: absolute;
+                top: 0.625rem; left: 0.625rem; bottom: 0.625rem; right: 0.625rem;
+                border: 1px dashed #9e9c93;
+                padding: 1.5rem;            
+            }
+
+            &__head {
+                background: url('../images/menu__head.png') bottom center no-repeat;
+                background-size: contain;
+                height: 4.5rem;
+                display: flex;
+                justify-content: space-around;
+
+                span {
+                    font-family: $main-bold-font;
+                    font-size: 1rem;
+                }
+            }
+
+            h2 {
+                font-family: $main-bold-font;
+                font-size: 2.5rem;
+                
+                @media screen and (max-width: 790px) {
+                    font-size: 2rem;
+                }
+            }
+
+            p {
+                font-family: $proxima-font;
+                font-size: 0.875rem;
+                line-height: 1.875rem;
+            }
+
+            &__button {
+                background: transparent;
+                border: 1px solid #9e9c93;
+                text-transform: uppercase;
+                font-size: 1.125rem;
+                font-family: $main-bold-font;
+                color: #a47d5e;
+                padding: 0.9375rem 3.75rem;
+                transition: 0.2s;
+
+                @media screen and (max-width: 790px) {
+                    margin-top: 1rem;
+                }
+            }
+
+            &__button:hover {
+                color: darken($color: #a47d5e, $amount: 10%);
+                background: darken($color: #f3f1e9, $amount: 10%);
+            }
+        }
+    }
+}

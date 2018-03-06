@@ -1,0 +1,7 @@
+- var items = ["Welcome", "Menu", "Reservations", "News", "Contact"]
+- var itemsId = ["Welcome", "Menu", "Reservations", "News", "Contact"]
+
+nav.desktop__nav
+    ul.desktop__nav__menu
+        each item, key in items
+            li: a.desktop__nav__link(href="#"+itemsId[key])= item 

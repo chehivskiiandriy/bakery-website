@@ -1,0 +1,22 @@
+@import "../../node_modules/font-awesome/scss/font-awesome";
+@import "../../node_modules/normalize.scss/normalize";
+@import "../../node_modules/hamburgers/_sass/hamburgers/hamburgers";
+@import "../libs/superslides/superslides";
+@import "../../node_modules/slick-carousel/slick/slick.scss";
+@import "../../node_modules/slick-carousel/slick/slick-theme.scss";
+
+@import "global/mixins";
+@import "global/var";
+@import "global/common";
+@import "global/fonts";
+@import "global/base";
+@import "global/title";
+
+@import "sections/header";
+@import "sections/desktop__nav";
+@import "sections/mobile__nav";
+@import "sections/hero";
+@import "sections/art__of__cakes";
+@import "sections/pancakes";
+@import "sections/rating";
+@import "sections/breakfast";
